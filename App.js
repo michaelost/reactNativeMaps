@@ -8,11 +8,13 @@ import CustomModal from './CustomModal.js';
 import Map from './Map';
 
 export default class App extends React.Component {
+
   render() {
     return (
       <View style={styles.container}>
       <Map />
-      <CustomModal/> 
+    
+      <CustomModal /> 
       </View>
     );
   }

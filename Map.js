@@ -54,38 +54,9 @@ export default class App extends React.Component {
             ref={ref => { this.marker1 = ref; }}
             coordinate={markers[0].coordinate}
             title="This is a native view"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation" // eslint-disable-line max-len
-          />
-          <MapView.Marker
-            coordinate={markers[1].coordinate}
-          >
-            <MapView.Callout style={styles.plainView}>
-
-              <View>
-                <Text>This is a plain view</Text>
-              </View>
-            </MapView.Callout>
-          </MapView.Marker>
-          <MapView.Marker
-            coordinate={markers[2].coordinate}
-            calloutOffset={{ x: -8, y: 28 }}
-            calloutAnchor={{ x: 0.5, y: 0.4 }}
           >
           </MapView.Marker>
         </MapView>
-        <View style={styles.buttonContainer}>
-          <View style={styles.bubble}>
-            <Text>Tap on markers to see different callouts</Text>
-          </View>
-        </View>
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity onPress={() => this.show()} style={[styles.bubble, styles.button]}>
-            <Text>Show</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => this.hide()} style={[styles.bubble, styles.button]}>
-            <Text>Hide</Text>
-          </TouchableOpacity>
-        </View>
       </View>
     );
   }
